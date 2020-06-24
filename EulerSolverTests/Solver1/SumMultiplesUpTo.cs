@@ -25,5 +25,16 @@ namespace EulerSolverTests
             // TODO: Uncomment and verify
             Assert.Equal(233168, result);
         }
+
+        [Fact]
+        public void ReturnsStringGiven1000()
+        {
+            var solver = new Solver1();
+
+            var result = solver.Solve();
+
+            // TODO: Uncomment and verify
+            Assert.Equal("233168", result);
+        }
     }
 }
