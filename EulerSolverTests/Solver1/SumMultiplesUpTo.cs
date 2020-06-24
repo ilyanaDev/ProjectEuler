@@ -23,7 +23,7 @@ namespace EulerSolverTests
             var result = solver.SumMultiplesUpTo(1000);
 
             // TODO: Uncomment and verify
-            // Assert.Equal(23, result);
+            Assert.Equal(233168, result);
         }
     }
 }
