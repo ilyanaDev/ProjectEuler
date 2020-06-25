@@ -4,15 +4,15 @@ using Xunit;
 
 namespace EulerSolverTests
 {
-    public class Solver4Tests
+    public class Solver5Tests
     {
 
-       [Fact]
+        [Fact]
         public void ReturnsSolution()
         {
-            var solver = new Solver4();
+            var solver = new Solver5();
 
-            var result = solver.FindLargestPalindrome3DigitProduct();
+            var result = solver.FindSolution();
 
             Assert.Equal(1, result);
         }
