@@ -10,7 +10,7 @@ namespace EulerSolverTests
         [Fact]
         public void ReturnsSolution()
         {
-            var solver = new Solver7();
+            var solver = new Solver8();
 
             var result = solver.FindSolution();
 
