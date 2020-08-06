@@ -6,25 +6,28 @@ namespace EulerSolver.Solvers
 {
     public class Solver16 : ISolver
     {
-        // pattern of last digit of 2 exponents: 2, 4, 8, 6
+        // pattern of last digit of 2 exponents: 2, 4, 8, 6 => 1,2,3,4
         // find sum of digits 2^1000
 
         public double FindSolution()
         {
             double bigNum = Math.Pow(2, 1000);
 
+            //double bigNum = 1071509;
+
             double result = 0;
 
             double remaining = bigNum;
 
-            for(int i = 0; i < 302; i++)
+            while(remaining > 0)
             {
-                int digValue = (int)(remaining % 10);
-
-                remaining -= digValue;
-                remaining = remaining / 10;
+                double digValue = remaining % 10;
 
                 result += digValue;
+
+                remaining -= digValue;
+                remaining /=  10;
+
             }
 
             return result;
@@ -32,11 +35,18 @@ namespace EulerSolver.Solvers
 
         public double FindNumDigits(double num)
         {
-            string numString = "" + num;
+            int numDigits = 0;
 
-            double result = numString.Length;
+            double remaining = num;
 
-            return result;
+            while (remaining >= 1)
+            {
+                numDigits++;
+
+                remaining = remaining / 10;
+            }
+
+            return numDigits;
 
         }
 

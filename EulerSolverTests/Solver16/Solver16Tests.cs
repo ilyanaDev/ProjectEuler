@@ -27,7 +27,7 @@ namespace EulerSolverTests
 
             var result = solver.FindNumDigits(bigExponent);
 
-            Assert.Equal(21, result);
+            Assert.Equal(302, result);
         }
 
         [Fact]
